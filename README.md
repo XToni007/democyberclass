@@ -1,1 +1,1 @@
-# democyberclass
+# democyberclass-webvuln
