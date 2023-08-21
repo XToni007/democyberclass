@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... your head content ... -->
+    <link rel="icon" type="image/png" href="../Assets/csc.png">
+</head>
+<body>
 <?php
 session_start();
 
@@ -37,13 +44,6 @@ if ($result->num_rows == 1) {
 
 $conn->close();
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- ... your head content ... -->
-</head>
-<body>
     <br>
     <a href="..\login\login.php">Logout</a>
 </body>
