@@ -17,18 +17,22 @@ $db_name="demo-cyberclass";
 $conn = new mysqli($servername, $username, $password,$db_name);
 
 // Query the database to get the user's information based on the ID
-$query = "SELECT name, email FROM `web-database` WHERE id = $userID";
+$query = "SELECT name,email,password FROM `web-database` WHERE id = $userID";
 $result = $conn->query($query);
 
 if ($result->num_rows == 1) {
     $row = $result->fetch_assoc();
-    $userName = $row["name"];
-    $userEmail = $row["email"];
+    $name = $row["name"];
+    $email = $row["email"];
+    $password = $row["password"];
+    echo "Welcome, $name";
+    echo "<br>";
+
 } else {
     // User not found in the database
     // Handle this situation as needed
-    $userName = "Unknown User";
-    $userEmail = "unknown@example.com";
+    echo "USER NOT FOUND";
+
 }
 
 $conn->close();
@@ -40,9 +44,7 @@ $conn->close();
     <!-- ... your head content ... -->
 </head>
 <body>
-    <h1>HALOOOOOOOOOO</h1>
-    <p>Welcome, <?php echo $userName; ?></p>
-    <p>Email: <?php echo $userEmail; ?></p>
+    <br>
     <a href="..\login\login.php">Logout</a>
 </body>
 </html>

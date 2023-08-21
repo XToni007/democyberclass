@@ -9,7 +9,7 @@
 <body>
     <div class="welcome-logo">
         <h1>Welcome To CSC</h1>
-        <img type="png" src="../Assets/csc.png" style="width: 5%;">
+        <img type="png" class="logo" src="../Assets/csc.png" style="width: 10%;">
     </div>
 
     <div class="form-group">
