@@ -15,13 +15,7 @@ if (!isset($_SESSION["user_id"])) {
 
 $userID = $_GET["id"]; // Get the user ID from the URL parameter
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db_name="demo-cyberclass";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password,$db_name);
+include '../Connection/conn.php';
 
 // Query the database to get the user's information based on the ID
 $query = "SELECT name,email,password FROM `web-database` WHERE id = $userID";

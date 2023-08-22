@@ -21,7 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../Index/index.php?id=" . $row["id"]);
         exit();
     } else {
-        echo "Invalid login credentials";
+        header("Location: ../login/login.php");
+        echo '<script language="javascript" type="text/javascript">alert("Invalid login credentials");</script>';
     }
 
     $conn->close();
